@@ -117,7 +117,7 @@ public class PBL02 {
             // p = 2p
 
 
-            Progress(i);
+            progress(i);
             // 途中経過を表示
 
 
@@ -212,7 +212,7 @@ public class PBL02 {
         // 最終的な演算結果を返す
     }
 
-    public static void Progress(int i) {
+    public static void progress(int i) {
         /*
          演算の進捗状況を出力する関数
         */
