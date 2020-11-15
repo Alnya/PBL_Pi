@@ -153,41 +153,22 @@ public class PBL02 {
         // 最終処理を行い、収束していない暫定的な値を返す。
     }
 
-    public static BigDecimal sqrt(BigDecimal num) {
+    public static BigDecimal sqrt(BigDecimal num){
         /*
          BigDecimal型の平方根計算をするための関数
+         ニュートン法
          */
 
-        BigDecimal tmp1 = BigDecimal.ZERO;
-        // BigDecimal型の初期値0を代入
-
-        BigDecimal tmp2 = BigDecimal.valueOf(Math.sqrt(num.doubleValue()));
+        BigDecimal x = BigDecimal.valueOf(Math.sqrt(num.doubleValue()));
         // BigDecimal型で、倍精度の初期値√numを代入
 
-        while (!tmp1.equals(tmp2)) {
-            /*
-             tmp1とtmp2が同じ値になるまで繰り返し
-             */
-
-            tmp1 = tmp2;
-            tmp2 = num.divide(tmp1, digits, RoundingMode.HALF_UP);
-            /*
-             tmp2 = num / tmp1
-             精度はdigits、切り上げ。
-             */
-
-            tmp2 = tmp2.add(tmp1);
-            // tmp2 += tmp1
-
-            tmp2 = tmp2.divide(BigDecimal.valueOf(2), digits, RoundingMode.HALF_UP);
-            /*
-             tmp2 /= 2
-             精度はdigits、切り上げ。
-             */
+        for(int i = 16; i < digits; i *= 2){
+            //x = x - (x * x - a) / (2 * x);
+            x = x.subtract(
+                    x.multiply(x).subtract(num).divide(
+                            x.multiply(BigDecimal.valueOf(2)), digits, RoundingMode.HALF_EVEN));
         }
-
-        return tmp2;
-        // 精度がdigitsのBigDecimal型の演算結果を返す
+        return x;
     }
 
     public static BigDecimal finalProcessing() {
