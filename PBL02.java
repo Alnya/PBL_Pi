@@ -106,12 +106,12 @@ public class PBL02 {
             */
 
             b = sqrt(b.multiply(y));
-            // b = √(b*y)
+            // b = √(by)
 
             BigDecimal tmp = y.subtract(a);
             tmp = tmp.pow(2).multiply(p);
             t = t.subtract(tmp);
-            // t = t - p*(y - a)^2
+            // t = t - p(y - a)^2
 
             p = p.multiply(BigDecimal.valueOf(2));
             // p = 2p
@@ -163,7 +163,7 @@ public class PBL02 {
         // BigDecimal型で、倍精度の初期値√numを代入
 
         for(int i = 16; i < digits; i *= 2){
-            //x = x - (x * x - a) / (2 * x);
+            //x = x - (x^2 - num) / 2x;
             x = x.subtract(
                     x.multiply(x).subtract(num).divide(
                             x.multiply(BigDecimal.valueOf(2)), digits, RoundingMode.HALF_EVEN));
@@ -182,7 +182,7 @@ public class PBL02 {
         tmp = tmp.divide(BigDecimal.valueOf(4), digits, RoundingMode.HALF_EVEN);
         tmp = tmp.divide(t, digits, RoundingMode.HALF_EVEN);
         /*
-         tmp = (a+b)^2 / 4*t
+         tmp = (a+b)^2 / 4t
          精度はdigits、HALF_EVENで丸め処理。
         */
 
