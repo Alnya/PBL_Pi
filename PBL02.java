@@ -16,7 +16,7 @@ public class PBL02 {
     //  10000桁: 12回の試行回数で完全収束  0.88 sec.
     // 100000桁: 16回の試行回数で完全収束  42 sec.
 
-    private static final int count = 20;
+    private static final int count = 100;
     // 演算回数を代入
 
     private static final int digit = 10000;
@@ -197,7 +197,7 @@ public class PBL02 {
         /*
          演算の進捗状況を出力する関数
         */
-        if (i % (count / 10) == 0) {
+        if (i % 2 == 0) {
             /*
              countを十等分して進捗を出力
             */
