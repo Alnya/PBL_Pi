@@ -24,7 +24,7 @@ public class PBL02 {
     // ‹‚ß‚½‚¢Œ…”‚ð‘ã“ü
 
 
-    private static final int digits = digit + 5;
+    private static int digits = digit + 5;
     // ‹‚ß‚éŒ…”‚æ‚è­‚µ‘½‚¢Œ…”‚ÅŒvŽZ‚·‚é‚½‚ß
 
     private static BigDecimal ansTmp = BigDecimal.ZERO;
@@ -66,6 +66,7 @@ public class PBL02 {
             System.out.println("Input new digit.");
             System.out.print(">>>");
             digit = scan.nextInt();
+            digits = digit + 5;
             System.out.println("Start the program!");
         } else {
             System.out.println("Start the program!");
