@@ -8,7 +8,6 @@
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Scanner;
 
 public class PBL02 {
 
@@ -20,11 +19,11 @@ public class PBL02 {
     private static final int count = 100;
     // ‰‰ŽZ‰ñ”‚ð‘ã“ü
 
-    private static int digit = 10000;
+    private static final int digit = 50000;
     // ‹‚ß‚½‚¢Œ…”‚ð‘ã“ü
 
 
-    private static int digits = digit + 5;
+    private static final int digits = digit + 5;
     // ‹‚ß‚éŒ…”‚æ‚è­‚µ‘½‚¢Œ…”‚ÅŒvŽZ‚·‚é‚½‚ß
 
     private static BigDecimal ansTmp = BigDecimal.ZERO;
@@ -54,23 +53,6 @@ public class PBL02 {
 
 
     public static void main(String[] args) {
-
-        System.out.println("Default digit is 10000.");
-        System.out.println("Are you change it?");
-        System.out.println("Yes:1  No:0");
-        System.out.print(">>>");
-        Scanner scan = new Scanner(System.in);
-        int frag = scan.nextInt();
-
-        if (frag == 1) {
-            System.out.println("Input new digit.");
-            System.out.print(">>>");
-            digit = scan.nextInt();
-            digits = digit + 5;
-            System.out.println("Start the program!");
-        } else {
-            System.out.println("Start the program!");
-        }
 
         timeStart = System.nanoTime();
         // ‰‰ŽZŠJŽnŽžŠÔ‚ð‹L˜^
