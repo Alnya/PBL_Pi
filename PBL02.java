@@ -62,7 +62,7 @@ public class PBL02 {
         Scanner scan = new Scanner(System.in);
         int frag = scan.nextInt();
 
-        if(frag == 1){
+        if (frag == 1) {
             System.out.println("Input new digit.");
             System.out.print(">>>");
             digit = scan.nextInt();
@@ -170,7 +170,7 @@ public class PBL02 {
         // 最終処理を行い、収束していない暫定的な値を返す。
     }
 
-    public static BigDecimal sqrt(BigDecimal num){
+    public static BigDecimal sqrt(BigDecimal num) {
         /*
          BigDecimal型の平方根計算をするための関数
          ニュートン法
@@ -179,7 +179,7 @@ public class PBL02 {
         BigDecimal x = BigDecimal.valueOf(Math.sqrt(num.doubleValue()));
         // BigDecimal型で、倍精度の初期値√numを代入
 
-        for(int i = 16; i < digits; i *= 2){
+        for (int i = 16; i < digits; i *= 2) {
             //x = x - (x^2 - num) / 2x;
             x = x.subtract(
                     x.multiply(x).subtract(num).divide(
