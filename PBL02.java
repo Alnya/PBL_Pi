@@ -19,7 +19,7 @@ public class PBL02 {
     private static final int count = 100;
     // 演算回数を代入
 
-    private static final int digit = 50000;
+    private static final int digit = 10000;
     // 求めたい桁数を代入
 
 
@@ -212,7 +212,7 @@ public class PBL02 {
             double timeElapsed = (timeEnd - timeStart) / ((double) 1000000000);
             // この時点での経過時刻をsecに変換して計算
 
-            System.out.println("-----途中経過----- count:=" + i + " 経過時間:" + timeElapsed + " sec.");
+            System.out.println("-----途中経過----- count:" + i + " 経過時間:" + timeElapsed + " sec.");
             // 現在の演算回数と経過時間を出力
         }
     }
