@@ -199,7 +199,7 @@ public class PBL02 {
         */
         if (i % 2 == 0) {
             /*
-             countを十等分して進捗を出力
+             偶数回目に途中経過を出力
             */
 
             // BigDecimal tmp = finalProcessing();
