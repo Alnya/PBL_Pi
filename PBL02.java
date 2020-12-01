@@ -19,7 +19,7 @@ public class PBL02 {
     private static final int count = 100;
     // ‰‰Z‰ñ”‚ğ‘ã“ü
 
-    private static final int digit = 10000;
+    private static final int digit = 20000;
     // ‹‚ß‚½‚¢Œ…”‚ğ‘ã“ü
 
 
