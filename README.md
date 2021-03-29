@@ -1,12 +1,13 @@
 # PBL_Pi
+
 ## About
-**This repository is for PBL_Pi program.**
 
-<br>
+This program is for calculating Pi.
 
-`The algorithm used is Gauss=Legendre's algorithm`
+## Theory
 
-<br>
+Gauss=Legendre's algorithm is used.
 
 ## ToDo
+
 *Writing a code for Chudnovsky's algorithm.*
